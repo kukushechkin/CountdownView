@@ -1,5 +1,7 @@
 # CountdownView SwiftUI view
 
+![Swift](https://github.com/kukushechkin/CountdownView/workflows/Swift/badge.svg?branch=master)
+
 A simple view to display sequence of views before something important starts.
 
 ```swift
