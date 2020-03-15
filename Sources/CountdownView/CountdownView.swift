@@ -52,7 +52,7 @@ fileprivate struct CountdownTextModifier: ViewModifier {
     }
 }
 
-struct CountdownView: View {
+public struct CountdownView: View {
     @ObservedObject private var countdown = Countdown()
     private let isVisible: Bool
     private let steps: [AnyView]
@@ -64,7 +64,7 @@ struct CountdownView: View {
         return self.steps[index]
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             if self.isVisible {
                 self.getAnotherStepView(self.countdown.index)
