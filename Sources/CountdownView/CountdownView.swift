@@ -74,7 +74,7 @@ public struct CountdownView: View {
         }
     }
     
-    init(startOn: Binding<Bool>, steps: [AnyView], onFinish: @escaping () -> Void) {
+    public init(startOn: Binding<Bool>, steps: [AnyView], onFinish: @escaping () -> Void) {
         self.isVisible = startOn.wrappedValue
         self.steps = steps
         if startOn.wrappedValue {
@@ -85,7 +85,7 @@ public struct CountdownView: View {
         }
     }
     
-    init(startOn: Binding<Bool>, steps: [String], onFinish: @escaping () -> Void) {
+    public init(startOn: Binding<Bool>, steps: [String], onFinish: @escaping () -> Void) {
         let viewSteps = steps.map { label in
             // Default appearance
             AnyView(Text("\(label)")
