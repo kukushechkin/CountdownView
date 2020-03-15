@@ -2,7 +2,24 @@
 
 ![Swift](https://github.com/kukushechkin/CountdownView/workflows/Swift/badge.svg?branch=master)
 
-A simple view to display sequence of views before something important starts.
+A simple view to display sequence of views before something important starts. Here is a how you can do it: 
+
+```swift
+
+@State var start = false
+
+...
+
+.overlay(
+    CountdownView(startOn: $start,
+                  steps: ["3️⃣", "2️⃣", "1️⃣", "🔥🔥🔥"]) {
+        // Let the games begin!
+    }
+)
+
+```
+
+or with custom background, views and animations:
 
 ```swift
 
