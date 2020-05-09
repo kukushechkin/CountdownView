@@ -16,7 +16,9 @@ jobs:
     - name: Build
       run: swift build -v
     - name: Run tests
-      run: swift test -v
-    - name: Swift Coverage Report
-      uses: maxep/spm-lcov-action@0.3.1
+      run: swift test --enable-code-coverage
+    - name: Test coverage report
+      uses: maxep/spm-lcov-action@0.3.0
+      with:
+        output-file: ./coverage/lcov.info
 
